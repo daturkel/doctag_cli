@@ -1,6 +1,5 @@
 from setuptools import setup
 
-
 setup(
     name="doctag_cli",
     version="0.0.1",
