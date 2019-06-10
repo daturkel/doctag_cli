@@ -13,7 +13,7 @@ repos:
   hooks:
   - id: black
     language_version: python
-- repo: https://github.com/miki725/importanize/
+- repo: https://github.com/pre-commit/mirrors-isort
   rev: master
   hooks:
-  - id: importanize
+  - id: isort
