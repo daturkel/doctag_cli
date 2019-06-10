@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="doctag_cli",
-    version="0.0.1",
+    version="0.0.2",
     description="A simple CLI for tagging documents with doctag.",
     long_description=open("README.md").read(),
     install_requires=["doctag>=0.0.1", "Click>=7.0"],
