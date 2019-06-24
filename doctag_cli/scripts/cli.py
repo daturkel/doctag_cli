@@ -2,7 +2,7 @@ import os
 
 import click
 from doctag import TagIndex
-from doctag_cli.utils import doc_str, get_ti, tag_str
+from doctag_cli.utils import doc_str, get_ti, get_ti_file, initialize, tag_str
 
 
 @click.group(invoke_without_command=True)
@@ -16,10 +16,16 @@ def cli(ctx):
 
 
 @cli.command()
-def start():
+def init():
     """Create a tag index at ~/.dtdb.json (or $DTDB if it is set).
     """
-    ti = get_ti()
+    try:
+        ti = get_ti()
+        print(f"Tag index already exists at {ti.loc}")
+    except FileNotFoundError:
+        tif = get_ti_file()
+        ti = initialize(location=tif)
+        print(f"Tag index initialized at {tif}.")
 
 
 @cli.command()

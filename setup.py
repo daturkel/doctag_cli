@@ -5,7 +5,7 @@ setup(
     version="0.0.2",
     description="A simple CLI for tagging documents with doctag.",
     long_description=open("README.md").read(),
-    install_requires=["doctag>=0.0.1", "Click>=7.0"],
+    install_requires=["doctag>=0.0.1", "Click>=7.0", "pyyaml>=5.1"],
     url="https://github.com/daturkel/doctag_cli",
     author="Dan Turkel",
     author_email="daturkel@gmail.com",
